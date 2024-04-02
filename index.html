@@ -1,3 +1,1029 @@
-<!DOCTYPE html>
-<h1>This is a mirror site.</h1>
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <title>首页 - 四川大学飞扬俱乐部</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="shortcut icon" href="https://www.fyscu.com/favicon.ico">
+    <link rel="stylesheet" href="https://www.fyscu.com/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://www.fyscu.com/css/animate.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.fyscu.com/css/jquery.easy-pie-chart.css">
+    <link rel="stylesheet" href="https://www.fyscu.com/css/styles.css" title="mainStyle">
+    <link rel="stylesheet" type="text/css" href="https://www.fyscu.com/rs-plugin/css/settings.css" media="screen" />
+    <script src="https://www.fyscu.com/js/modernizr.custom.32033.js"></script>
+    <script src="https://www.fyscu.com/js/uaredirect.js" type="text/javascript"></script>
+    <script type="text/javascript">uaredirect("https://www.fyscu.com/phone.html");</script>
+    <link rel="preload" as="image" href="https://www.fyscu.com/img/music_on.png">
+    <link rel="preload" as="image" href="https://www.fyscu.com/img/music_off.png">
+    <style>
+        .bgm_div {
+            position: fixed;
+            margin: 5px;
+            z-index: 999;
+        }
 
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .music_rotate {
+            animation: rotate 4s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="bgm_div">
+        <audio id="backgroundMusic" src="music/fy.mp3" autoplay loop></audio>
+        <a id="backgroundMusic_btn" onclick="toggleMusic()">
+            <img id="music_btn" border="0">
+        </a>
+    </div>
+    <div class="pre-loader">
+        <div class="load-con">
+            <img src="https://www.fyscu.com/img/logo-blue.png" class="animated fadeInDown" alt="">
+            <div class="spinner">
+                <div class="bounce1"></div>
+                <div class="bounce2"></div>
+                <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+    <div class="go-down">
+        <a href="#whoWeAre">
+            <i class="fa fa-angle-down fa-3x"></i>
+        </a>
+    </div>
+    <div id="wrap" class="home">
+        <header class="masthead">
+            <div class="slider-container" id="slider">
+                <div class="tp-banner-container">
+                    <div class="tp-banner">
+                        <ul>
+                            <li data-transition="slotfade-horizontal" data-slotamount="7" data-masterspeed="500">
+                                <!-- MAIN IMAGE -->
+                                <img src="https://www.fyscu.com/img/dummy.png" data-lazyload="https://www.fyscu.com/img/main/bgp1.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                                <!-- LAYERS -->
+                                <div  class="tp-caption italic large_white_light sft hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="-200" data-speed="700" data-start="1300" data-easing="Power4.easeOut">
+                                    <h1>四川大学<b style="font-family:FZYaoti;">飞扬俱乐部</b></h1>
+                                </div>
+                                <div class="tp-caption italic large_white_light sfl hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="-150" data-speed="700" data-start="1500" data-easing="Power4.easeOut">
+                                    <h2 style="font-family:FZYaoti;">Never</h2>
+                                </div>
+                                <div class="tp-caption italic large_white_light sfl hidden-xs" data-x="left" data-y="center" data-hoffset="80" data-voffset="-150" data-speed="700" data-start="1500" data-easing="Power4.easeOut">
+                                    <h2 style="font-family:FZYaoti;">Stop</h2>
+                                </div>
+                                <div class="tp-caption italic large_white_light sfb hidden-xs" data-x="left" data-y="center" data-hoffset="150" data-voffset="-150" data-speed="700" data-start="1700" data-easing="Power4.easeOut">
+                                     <h2 style="font-family:FZYaoti;">Flying</h2>
+                                </div>
+                                <div class="tp-caption italic large_white_light sfr hidden-xs" data-x="left" data-y="center" data-hoffset="230" data-voffset="-150" data-speed="700" data-start="1900" data-easing="Power4.easeOut">
+                                     <h2 style="font-family:FZYaoti;">Higher</h2>
+                                </div>
+                                <div class="tp-caption lfb" data-x="left" data-y="center" data-hoffset="0" data-voffset="-100" data-speed="1000" data-start="1900" data-easing="Power4.easeOut">
+                                    <a href="#about"  style="font-size:18px;" class="btn btn-naked">开始探索 <span class="fa fa-angle-right"></span></a>
+                                </div>
+                            </li>
+                            <li data-transition="slotfade-horizontal" data-slotamount="7" data-masterspeed="500">
+                                <!-- MAIN IMAGE -->
+                                <img src="https://www.fyscu.com/img/dummy.png" data-lazyload="https://www.fyscu.com/img/main/bgp2.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                                <div class="tp-caption large_white_light italic sfb hidden-xs" data-x="left" data-y="center" data-hoffset="715" data-voffset="-50" data-speed="1000" data-start="1300" data-easing="Power4.easeOut">
+                                    <a style="font-family:FZYaoti;" href="#portfolio" class="btn btn-naked">四川大学年度奉献人物</a>
+                                </div>
+                                <div class="tp-caption large_white_light italic sfb hidden-xs" data-x="left" data-y="center" data-hoffset="715" data-voffset="50" data-speed="1000" data-start="1300" data-easing="Power4.easeOut">
+                                    <a style="font-family:FZYaoti;" href="#portfolio" class="btn btn-naked">四川大学社团示范刊物</a>
+                                </div>
+                                <div class="tp-caption large_white_light italic sfb hidden-xs" data-x="left" data-y="center" data-hoffset="715" data-voffset="150" data-speed="1000" data-start="1300" data-easing="Power4.easeOut">
+                                    <a style="font-family:FZYaoti;" href="#portfolio" class="btn btn-naked">四川大学优秀校园媒体</a>
+                                </div>
+                                <div class="tp-caption large_white_light italic sfb hidden-xs" data-x="left" data-y="center" data-hoffset="715" data-voffset="250" data-speed="1000" data-start="1300" data-easing="Power4.easeOut">
+                                    <a style="font-family:FZYaoti;" href="#portfolio" class="btn btn-naked">四川大学十佳校级社团</a>
+                                </div>
+                                <div class="tp-caption lfb" data-x="left" data-y="center" data-hoffset="715" data-voffset="350" data-speed="1000" data-start="1900" data-easing="Power4.easeOut">
+                                    <a style="font-family:FZYaoti;" href="#about"  style="font-size:18px;" class="btn btn-naked">开始探索 <span class="fa fa-angle-right"></span></a>
+                                </div>
+                            </li>
+                            <li data-transition="slotfade-horizontal" data-slotamount="7" data-masterspeed="500">
+                                <!-- MAIN IMAGE -->
+                                <img src="https://www.fyscu.com/img/dummy.png" data-lazyload="https://www.fyscu.com/img/main/bgp3.jpg" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                                <div class="tp-caption lfl fadeout" data-x="left" data-y="center" data-hoffset="0" data-voffset="0" data-speed="500" data-start="700" data-easing="Power4.easeOut">
+                                    <img src="https://www.fyscu.com/img/main/xcxs.png" alt="">
+                                </div>
+                                <div class="tp-caption large_white_bold sft" data-x="520" data-y="center" data-hoffset="0" data-voffset="-120" data-speed="500" data-start="1200" data-easing="Power4.easeOut">
+                                    <h1 style="font-family:FZYaoti;">创新实践，服务川大</h1>
+                                </div>
+                                <div class="tp-caption large_white_light sfb" data-x="520" data-y="center" data-hoffset="0" data-voffset="-40" data-speed="1000" data-start="1300" data-easing="Power4.easeOut">
+                                    <b style="font-size:30px;font-family:FZYaoti;">成立19年</b>
+                                </div>
+                                <div class="tp-caption large_white_light sfb" data-x="520" data-y="center" data-hoffset="0" data-voffset="10" data-speed="1000" data-start="1300" data-easing="Power4.easeOut">
+                                    <b style="font-size:30px;font-family:FZYaoti;">川大最专业的集技术交流，电脑维修</b>
+                                </div>
+                                <div class="tp-caption large_white_light sfb" data-x="520" data-y="center" data-hoffset="0" data-voffset="60" data-speed="1000" data-start="1300" data-easing="Power.easeOut">
+                                    <b style="font-size:30px;font-family:FZYaoti;">软件研发一体的技术性公益实践类IT社团</b>
+                                </div>
+                                <div class="tp-caption sfb hidden-xs" data-x="520" data-y="center" data-hoffset="0" data-voffset="150" data-speed="1000" data-start="1700" data-easing="Power4.easeOut">
+                                    <a href="#about" class="btn btn-primary btn-lg">开始探索</a>
+                                </div>
+                            </li>
+
+                        </ul>
+                        <div class="tp-bannertimer"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Fixed navbar -->
+            <div class="navbar navbar-static-top" id="nav" role="navigation">
+                <div class="theme-switcher">
+                    <div class="colors">
+                        <a href="javascript:void(0)" class="blue"></a>
+                        <a href="javascript:void(0)" class="orange"></a>
+                        <a href="javascript:void(0)" class="red"></a>
+                    </div>
+                    <a href="javascript:void(0)" class="Switcher"><span class="fa fa-pencil fa-lg"></span></a>
+                </div>
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span class="sr-only">导航</span>
+                            <i class="fa fa-align-justify"></i>
+                        </button>
+                        <a class="navbar-brand" href="#">
+                            <img src="https://www.fyscu.com/img/logo-blue.png" alt="">
+                        </a>
+                    </div>
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <!--
+                            <li class="active"><a href="#slider">欢迎</a>
+                            </li>-->
+                            <li><a href="#about">首页</a>
+                            </li>
+                            <!--<li><a href="#services">社团</a></li>-->
+                            <li><a href="#team">部门</a>
+                            </li>
+                            <li><a href="#portfolio">故事</a>
+                            </li>
+                            <li><a href="#get-in-touch">关于</a>
+                            </li>
+                            <li><a href="http://log.fyscu.com/">博客</a>
+                            </li>
+                            <li><a href="http://mag.fyscu.com/">杂志</a>
+                            </li>
+                            <li><a href="http://bbs.fyscu.com/">论坛</a>
+                            </li>
+                            <li><a href="http://fix.fyscu.com/">维修服务</a>
+                            </li>
+                            <li><a href="http://tmp.fyscu.com/">飞扬维修</a>
+                            </li>
+                            <li><a href="http://lab.fyscu.com/">飞扬研发</a>
+                            </li>
+                            <li class="social-nav visible-lg">
+                                <a href="tencent://message/?uin=2773501874&Site=Sambow&Menu=yes"><i class="fa fa-qq"></i></a>
+                                <a href="https://m.weibo.cn/u/2386767780"><i class="fa fa-weibo"></i></a>
+                                <a href="https://space.bilibili.com/28406325"><i class="fa fa-video-camera"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-push-2 clearfix">
+                        <div class="section-heading scrollpoint sp-effect3">
+                            <h1 style="font-family:FZYaoti;">四川大学<span>飞扬俱乐部</span>
+                            </h1>
+                            <h4 style="font-family:FZYaoti;">
+                                <br />
+                                <p>四川大学飞扬俱乐部，创建于2003年9月</p>
+                                <p>一个集技术交流、电脑维修、软件研发、网站小程序等建设维护于一体的专业公益IT社团</p>
+                                <p>飞扬秉承“创新实践，服务川大”理念，旨在通过专业技术应用及研发服务大众</p>
+                                <p>向川大师生提供免费的电脑维修维护及其他科技服务</p>
+                                </h4>
+                            <span class="divider"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12 scrollpoint sp-effect4">
+                                <img src="https://www.fyscu.com/img/main/club.jpg" style="border-radius: 50px;width:50%;" class="https://www.fyscu.com/img-responsive img-center" alt="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div style="width: 16%;" class="col-md-3">
+                                <div class="media vertical scrollpoint sp-effect5">
+                                    <a href="http://fix.fyscu.com/">
+                                        <i class="media-object fa fa-wrench fa-2x"></i>
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">电脑报修</h4>
+                                        <p>电脑报修是飞扬俱乐部提供的免费公益电脑维修服务</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 16%;" class="col-md-3">
+                                <div class="media vertical scrollpoint sp-effect5">
+                                    <a href="http://bbs.fyscu.com/">
+                                        <i class="media-object fa fa-users fa-2x"></i>
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">肥羊论坛</h4>
+                                        <p>小肥羊们的聚集地，你可以在这儿分享你的飞扬经历</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 16%;" class="col-md-3">
+                                <div class="media vertical scrollpoint sp-effect5">
+                                    <a href="http://lab.fyscu.com/">
+                                        <i class="media-object fa fa-codepen fa-2x"></i>
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">飞扬研发</h4>
+                                        <p>研发实验室是飞扬俱乐部研发部做的一些实验性产品</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 16%;" class="col-md-3">
+                                <div class="media vertical scrollpoint sp-effect5">
+                                    <a href="http://log.fyscu.com/">
+                                        <i class="media-object fa fa-rss fa-2x"></i>
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">飞扬博客</h4>
+                                        <p>这里是飞扬俱乐部写东西的地方。有许多好玩的东西</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 16%;" class="col-md-3">
+                                <div class="media vertical scrollpoint sp-effect5">
+                                    <a href="http://mag.fyscu.com/">
+                                        <i class="media-object fa fa-book fa-2x"></i>
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">飞扬杂志</h4>
+                                        <p>这里是飞扬俱乐部的定期期刊，有许许多多有趣的玩意</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width: 16%;" class="col-md-3">
+                                <div class="media vertical scrollpoint sp-effect5">
+                                    <a href="http://tmp.fyscu.com/">
+                                        <i class="media-object fa fa-user-md fa-2x"></i>
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">飞扬维修</h4>
+                                        <p>这里是飞扬俱乐部技术人员的介绍页面，可以偷看xgg和xjj哦</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="buyNow">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-7 scrollpoint sp-effect2">
+                        <img src="https://www.fyscu.com/img/main/维修部.jpg" alt="" style="border-radius: 30px;width:75%;" class="https://www.fyscu.com/img-responsive macbook-image img-center">
+                    </div>
+                    <div class="col-md-5 scrollpoint sp-effect1">
+                        <h1 style="font-family:FZYaoti;">飞扬の<span >维修</span></h1>
+                        <p>按照某届学长的说法：</p>
+                        <blockquote style="color:rgb(255,255,255);font-family:FZShuTi;">就是一群天真可爱的人聚到一起，被另一群比他们大一届的天真可爱的学长学姐带领着，说咱们一起帮助别人去吧，毕竟咱们做的也不是什么大事，就帮别人解决一下蓝屏啊，开机慢啊......之类的活</blockquote>
+                        <p>飞扬维修部就是很多这样天真可爱的人一代代传承下去的吧。</p>
+                        <a href="http://tmp.fyscu.com/" class="btn btn-primary btn-lg">查看更多</a>
+                        <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>
+                        <a href="http://fix.fyscu.com/" style="background-color: #4CAF50;" class="btn btn-primary btn-lg">立即报修</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="highlights">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators vertical">
+                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            </ol>
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img style="border-radius: 30px;" src="https://www.fyscu.com/img/wins/2.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img style="border-radius: 30px;" src="https://www.fyscu.com/img/wins/3.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img style="border-radius: 30px;" src="https://www.fyscu.com/img/wins/1.jpg" alt="">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h4>飞扬俱乐部</h4>
+                        <h5>用信息科技改善校园生活</h5>
+                        <p>集技术交流、电脑维修、软件研发一体的技术性公益实践类IT社团<br />修机量20000+，上线报修小程序、飞扬官网等</p>
+                        <ul>
+                            <li>2003年 飞扬俱乐部前身飞扬工作室成立</li>
+                            <li>2006年 协助川大机房检修；电脑维修量突破1000台</li>
+                            <li>2011年 上线宽带算号系统在线版；电脑维修量突破10000台</li>
+                            <li>2018年 上线微信报修小程序；与西南民族大学交流合办大型维修</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 scrollpoint sp-effect1">
+                        <img src="https://www.fyscu.com/img/main/fixc.jpg" style="border-radius: 30px;margin:20% auto;width:80%" class="https://www.fyscu.com/img-responsive ipad-image img-center" alt="">
+                    </div>
+                    <div class="col-md-7 scrollpoint sp-effect2">
+                        <h1>川大最专业的技术社团<span></span>
+                        </h1>
+                        <div class="media media-circle">
+                            <a class="pull-left" href="">
+                                <i class="media-object fa fa-angle-right fa-2x"></i>
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">技术过硬</h4>
+                                <p>我们是最专业的团队！专业！专业！专业！重要的事情说三遍！！</p>
+                                <p><br /></p>
+                            </div>
+                        </div>
+                        <div class="media media-circle">
+                            <a class="pull-left" href="">
+                                <i class="media-object fa fa-angle-right fa-2x"></i>
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">公益服务</h4>
+                                <p>飞扬俱乐部提供的维修的服务是完全免费的，我们不会收取费用</p>
+                                <p><br /></p>
+                            </div>
+                        </div>
+                        <div class="media media-circle">
+                            <a class="pull-left" href="">
+                                <i class="media-object fa fa-angle-right fa-2x"></i>
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading">活动丰富</h4>
+                                <p>跨区大修，技术讲座，新生游园......我们的活动多的数不清！</p>
+                                <p><br /></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!--
+        <section id="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-push-2 clearfix">
+                        <div class="section-heading scrollpoint sp-effect3">
+                            <h1>.Services we offer</h1>
+                            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore reiciendis vel reprehenderit expedita cupiditate repellat debitis! Est qui quae consectetur.</h4>
+                            <span class="divider"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="media media-services right scrollpoint sp-effect1">
+                                    <a class="pull-right" href="#">
+                                        <i class="media-object fa fa-mobile fa-2x"></i>
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">Mobile development</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, eligendi ipsa.</p>
+                                    </div>
+                                </div>
+                                <div class="media media-services right scrollpoint sp-effect2">
+                                    <a class="pull-right" href="#">
+                                        <i class="media-object fa fa-link fa-2x"></i>
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">networking</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, eligendi ipsa.</p>
+                                    </div>
+                                </div>
+                                <div class="media media-services right scrollpoint sp-effect1">
+                                    <a class="pull-right" href="#">
+                                        <i class="media-object fa fa-film fa-2x"></i>
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">video editing</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, eligendi ipsa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="media media-services scrollpoint sp-effect2">
+                                    <a class="pull-left" href="#">
+                                        <i class="media-object fa fa-send-o fa-2x"></i>
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">startup launching</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, eligendi ipsa.</p>
+                                    </div>
+                                </div>
+                                <div class="media media-services scrollpoint sp-effect1">
+                                    <a class="pull-left" href="#">
+                                        <i class="media-object fa fa-shopping-cart fa-2x"></i>
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">ui / ux design</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, eligendi ipsa.</p>
+                                    </div>
+                                </div>
+                                <div class="media media-services scrollpoint sp-effect2">
+                                    <a class="pull-left" href="#">
+                                        <i class="media-object fa fa-shopping-cart fa-2x"></i>
+                                    </a>
+                                    <div class="media-body">
+                                        <h4 class="media-heading">e-commerce solutions</h4>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, eligendi ipsa.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-push-2 clearfix">
+                        <div class="section-heading scrollpoint sp-effect3">
+                            <i class="fa fa-quote-left fa-4x"></i>
+                            <h3>.Client's testimonials</h3>
+                            <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore reiciendis vel reprehenderit expedita cupiditate repellat debitis! Est qui quae consectetur.</h4>
+                            <span class="divider"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div id="testimonials-carousel" class="carousel slide scrollpoint sp-effect3" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, cumque reprehenderit blanditiis consequatur magnam ipsa vitae deserunt odio nesciunt enim sint tempore magni sit alias illo quisquam unde. Laboriosam, minima!</p>
+                                    <div class="row">
+                                        <div class="col-md-4 col-md-push-5">
+                                            <div class="author">
+                                                <h5>Name dot name</h5>
+                                                <p>Senior UI Developer - ScoopThemes</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, cumque reprehenderit blanditiis consequatur magnam ipsa vitae deserunt odio nesciunt enim sint tempore magni sit alias illo quisquam unde. Laboriosam.</p>
+                                    <div class="row">
+                                        <div class="col-md-4 col-md-push-5">
+                                            <div class="author">
+                                                <h5>Name dot name</h5>
+                                                <p>Senior UI Developer - ScoopThemes</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="left carousel-control" href="#testimonials-carousel" data-slide="prev">
+                                <i class="fa fa-angle-left fa-3x"></i>
+                            </a>
+                            <a class="right carousel-control" href="#testimonials-carousel" data-slide="next">
+                                <i class="fa fa-angle-right fa-3x"></i>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+-->
+
+
+        <section id="team">
+            <div class="container">
+                <div class="row">
+                    <div style="font-family:FZYaoti;" class="col-md-8 col-md-push-2 clearfix">
+                        <div class="section-heading scrollpoint sp-effect3">
+                            <h1>飞扬の部门</h1>
+                            <h4><p>电脑修得好，备胎当到老。只修电脑不过夜</p>
+                                <p>当然，我们不只修电脑的，我们还有设计狮</p>
+                                <p>修图修得好，备胎当到老。只帮抠图不过夜</p>
+                                <p>当然，我们不止有设计狮。我们还有程序猿</p>
+                                <p>代码写得好，备胎当到老。只教编程不过夜</p>
+                                <p>好吧</p>
+                                <p>其实那群修电脑厉害的都有女朋友了。毕竟他们天天都在用心地帮助男同学女同学修电脑</p>
+                                <p>其实那群修图很厉害的也有女朋友了。毕竟他们PS超级厉害的还会主动的帮忙其他的部门</p>
+                                <p>至于那群程序猿，<del>确实木有</del>咳咳~其实我们是一群很神秘的人，来自传说中最神秘的研发部</p>
+                                </h4>
+                            <span class="divider"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="row">
+                            <div class="member scrollpoint sp-effect5">
+                                <div class="member-image">
+                                    <img style="border-radius: 30px;" src="https://www.fyscu.com/img/team/xzb.jpg" alt="" class="https://www.fyscu.com/img-responsive img-center">
+                                    <div class="member-details">
+                                        <h4>行政部</h4>
+                                        <ul class="social">
+                                            <li><a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
+                                            </li>
+                                            <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+                                            </li>
+                                            <li><a href="#"><i class="fa fa-facebook fa-lg"></i></a>
+                                            </li>
+                                            <li><a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
+                                            </li>
+                                        </ul>
+                                        <p>管理协调大师，负责飞扬活动策划、通知、组织、记录；物资管理；文献/档案管理等。</p>
+                                    </div>
+                                </div>
+                                <div class="member-name">
+                                    <h4>行政部</h4>
+                                    <p>热爱飞扬的人力物力管理者聚集地</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="row">
+                            <div class="member scrollpoint sp-effect3">
+                                <div class="member-image">
+                                    <img style="border-radius: 30px;" src="https://www.fyscu.com/img/team/设计部.jpg" alt="" class="https://www.fyscu.com/img-responsive img-center">
+                                    <div class="member-details">
+                                        <h4>设计部</h4>
+                                        <ul class="social">
+                                            <li><a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
+                                            </li>
+                                            <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+                                            </li>
+                                            <li><a href="#"><i class="fa fa-facebook fa-lg"></i></a>
+                                            </li>
+                                            <li><a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
+                                            </li>
+                                        </ul>
+                                        <p>飞扬门面担当，负责飞扬海报、杂志、工作服、官网UI、周边设计</p>
+                                    </div>
+                                </div>
+                                <div class="member-name member-odd">
+                                    <h4>设计部</h4>
+                                    <p>热爱PS图像设计的美工狮聚集地</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="row">
+                            <div class="member scrollpoint sp-effect5">
+                                <div class="member-image">
+                                    <img style="border-radius: 30px;" src="https://www.fyscu.com/img/team/编辑部.jpg" alt="" class="https://www.fyscu.com/img-responsive img-center">
+                                    <div class="member-details">
+                                        <h4>编辑部</h4>
+                                        <ul class="social">
+                                            <li><a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
+                                            </li>
+                                            <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+                                            </li>
+                                            <li><a href="#"><i class="fa fa-facebook fa-lg"></i></a>
+                                            </li>
+                                            <li><a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
+                                            </li>
+                                        </ul>
+                                        <p>飞扬话筒担当，负责飞扬媒体运营、文案及杂志撰写、对外工作对接等</p>
+                                    </div>
+                                </div>
+                                <div class="member-name">
+                                    <h4>编辑部</h4>
+                                    <p>热爱瞎写的思想活跃人类聚集地</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6">
+                        <div class="row">
+                            <div class="member scrollpoint sp-effect3">
+                                <div class="member-image">
+                                    <img style="border-radius: 30px;" src="https://www.fyscu.com/img/team/研发部.jpg" alt="" class="https://www.fyscu.com/img-responsive img-center">
+                                    <div class="member-details">
+                                        <h4>研发部</h4>
+                                        <ul class="social">
+                                            <li><a href="#"><i class="fa fa-google-plus fa-lg"></i></a>
+                                            </li>
+                                            <li><a href="#"><i class="fa fa-twitter fa-lg"></i></a>
+                                            </li>
+                                            <li><a href="#"><i class="fa fa-facebook fa-lg"></i></a>
+                                            </li>
+                                            <li><a href="#"><i class="fa fa-pinterest fa-lg"></i></a>
+                                            </li>
+                                        </ul>
+                                        <p>着力方向涵盖Web前后端开发、客户端及移动设备开发、数据挖掘分析等，使用包括但不限于HTML/CSS/JS、Python、PHP、Node.js、Go、Java、C/C++等语言，负责为飞扬官网、报修系统等提供技术保障；开办技术讲座培训等</p>
+                                    </div>
+                                </div>
+                                <div class="member-name member-odd">
+                                    <h4>研发部</h4>
+                                    <p>热爱Coding，用代码改变世界的小伙伴</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio" style="height:1000px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-push-2 clearfix">
+                        <div class="section-heading scrollpoint sp-effect3">
+                            <h1>飞扬の故事</h1>
+                            <h4>
+                                <p style="font-family:FZYaoti;">“请问你是飞扬的嘛？”</p>
+                                <p style="font-family:FZYaoti;">“对啊，我是呢( •̀∀•́ )”</p>
+                                <p style="font-family:FZYaoti;">“原来维修还有妹子啊~”</p>
+                                <p style="font-family:FZYaoti;"></p></h4>
+                            <span class="divider"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="filters" class="button-group">
+                        <button data-filter="*" class="current">所有照片</button>
+                        <button data-filter=".btdz">百团大战</button>
+                        <button data-filter=".dxwx">大型维修</button>
+                        <button data-filter=".stjz">社团讲座</button>
+                        <button data-filter=".bsdh">拜师大会</button>
+                    </div>
+
+                    <div id="container">
+                        <div class="item col-md-3 col-sm-6 btdz">
+                            <div class="details">
+                                <img style="border-radius: 30px;" src="https://www.fyscu.com/img/time/1.jpg" alt="" class="https://www.fyscu.com/img-responsive">
+                                <div class="info-wrapper">
+                                    <span class="heart"><i class="fa fa-facebook"></i>
+                                    </span>
+                                    <div class="info">
+                                        <div class="name-tag">
+                                            <h5>飞扬的干事们正在整理传单</h5>
+                                            <span class="divider"></span>
+                                            <p>百团大战</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-3 col-sm-6 btdz">
+                            <div class="details">
+                                <img style="border-radius: 30px;" src="https://www.fyscu.com/img/time/2.jpg" alt="" class="https://www.fyscu.com/img-responsive">
+                                <div class="info-wrapper">
+                                    <span class="heart"><i class="fa fa-star-o"></i>
+                                    </span>
+                                    <div class="info">
+                                        <div class="name-tag">
+                                            <h5>同学们抢着加入飞扬俱乐部</h5>
+                                            <span class="divider"></span>
+                                            <p>百团大战</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-3 col-sm-6 dxwx">
+                            <div class="details">
+                                <img style="border-radius: 30px;" src="https://www.fyscu.com/img/time/6.jpg" alt="" class="https://www.fyscu.com/img-responsive">
+                                <div class="info-wrapper">
+                                    <span class="heart"><i class="fa fa-star"></i>
+                                    </span>
+                                    <div class="info">
+                                        <div class="name-tag">
+                                            <h5>可爱的技术员正在给设备清灰</h5>
+                                            <span class="divider"></span>
+                                            <p>大型维修</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-3 col-sm-6 stjz">
+                            <div class="details">
+                                <img style="border-radius: 30px;" src="https://www.fyscu.com/img/time/7.jpg" alt="" class="https://www.fyscu.com/img-responsive">
+                                <div class="info-wrapper">
+                                    <span class="heart"><i class="fa fa-pinterest"></i>
+                                    </span>
+                                    <div class="info">
+                                        <div class="name-tag">
+                                            <h5>学长认认真真地介绍硬件知识</h5>
+                                            <span class="divider"></span>
+                                            <p>社团讲座</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-3 col-sm-6 stjz">
+                            <div class="details">
+                                <img style="border-radius: 30px;" src="https://www.fyscu.com/img/time/8.jpg" alt="" class="https://www.fyscu.com/img-responsive">
+                                <div class="info-wrapper">
+                                    <span class="heart"><i class="fa fa-heart"></i>
+                                    </span>
+                                    <div class="info">
+                                        <div class="name-tag">
+                                            <h5>同学们被满满的精彩的干货所吸引</h5>
+                                            <span class="divider"></span>
+                                            <p>社团讲座</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-3 col-sm-6 bsdh">
+                            <div class="details">
+                                <img style="border-radius: 30px;" src="https://www.fyscu.com/img/time/3.jpg" alt="" class="https://www.fyscu.com/img-responsive">
+                                <div class="info-wrapper">
+                                    <span class="heart"><i class="fa fa-heart"></i>
+                                    </span>
+                                    <div class="info">
+                                        <div class="name-tag">
+                                            <h5>徒弟和师傅合影</h5>
+                                            <span class="divider"></span>
+                                            <p>拜师大会</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-3 col-sm-6 bsdh">
+                            <div class="details">
+                                <img style="border-radius: 30px;" src="https://www.fyscu.com/img/time/4.jpg" alt="" class="https://www.fyscu.com/img-responsive">
+                                <div class="info-wrapper">
+                                    <span class="heart"><i class="fa fa-heart"></i>
+                                    </span>
+                                    <div class="info">
+                                        <div class="name-tag">
+                                            <h5>徒弟为师傅倒茶</h5>
+                                            <span class="divider"></span>
+                                            <p>拜师大会</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item col-md-3 col-sm-6 dxwx">
+                            <div class="details">
+                                <img style="border-radius: 30px;" src="https://www.fyscu.com/img/time/5.jpg" alt="" class="https://www.fyscu.com/img-responsive">
+                                <div class="info-wrapper">
+                                    <span class="heart"><i class="fa fa-heart"></i>
+                                    </span>
+                                    <div class="info">
+                                        <div class="name-tag">
+                                            <h5>技术人员们来到望江校区维修设备</h5>
+                                            <span class="divider"></span>
+                                            <p>大型维修</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="twitter">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-push-2 clearfix">
+                        <div class="section-heading white scrollpoint sp-effect3">
+                            <h1 style="font-size:30px;font-family:FZYaoti;">飞扬の<span>哔哩哔哩</span></h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div id="carousel-twitter" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#carousel-twitter" data-slide-to="0" class="active"></li>
+                            <li data-target="#carousel-twitter" data-slide-to="1"></li>
+                            <li data-target="#carousel-twitter" data-slide-to="2"></li>
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+                            <div class="item active">
+                                <div class="row">
+                                    <div class="col-md-8 col-md-push-2">
+                                        <p style="font-family:FZYaoti;">每一年的暑假，飞扬俱乐部都会在B站为新入学的同学介绍江安的新生活<br /><a href="https://space.bilibili.com/28406325">飞扬代表发言</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-8 col-md-push-2">
+                                        <p style="font-family:FZYaoti;">不知道怎么选购电脑？平板哪种用起来手感好？手机有那些坑不能踩？关注飞扬俱乐部~满满干货都在这里<br /><a href="https://space.bilibili.com/28406325">飞扬代表发言</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="row">
+                                    <div class="col-md-8 col-md-push-2">
+                                        <p style="font-family:FZYaoti;">电脑蓝屏死机了？如何给电脑上硅脂？如何重装系统？分区怎么规划这么好？飞扬在B站等你<br /><a href="https://space.bilibili.com/28406325">飞扬代表发言</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="follow">
+                        <a href="https://space.bilibili.com/28406325" class="btn btn-empty text-center">
+                            <i class="fa fa-video-camera"></i> 关注
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="font-family:FZYaoti;" id="get-in-touch">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-push-2 clearfix">
+                        <div class="section-heading scrollpoint sp-effect3">
+                            <h1>联系我们</h1>
+                            <h4>遇到技术问题了？电脑出故障了？还是想要加入我们！</h4>
+                            <span class="divider"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="contact-details">
+                            <div class="detail">
+                                <h4>联系地址 / <y>ADDRESS</y></h4>
+                                <p>成都市双流区川大路二段<br />四川大学江安校区</p>
+                                <p>邮编：610207</p>
+                            </div>
+                            <div class="detail">
+                                <h4>企鹅号码 / <y>QQ ID</y></h4>
+                                <p>飞扬俱乐部官方：2773501874</p>
+                                <p>电脑问题互助群：1083244225</p>
+                                <p>2022飞扬会员群：633151156</p>
+                                <p>2023飞扬会员群：901031037</p>
+                            </div>
+                            <div class="detail">
+                                <h4>邮件地址 / <y>EMAIL</y></h4>
+                                <p>飞扬俱乐部：scufy@qq.com</p>
+                            </div>
+                            <div class="detail">
+                                <ul class="clearfix">
+                                    <li><a href="https://space.bilibili.com/28406325"><i class="fa fa-video-camera fa-2x"></i></a>
+                                    </li>
+                                    <li><a href="https://m.weibo.cn/u/2386767780"><i class="fa fa-weibo fa-2x"></i></a>
+                                    </li>
+                                    <li><a href="tencent://message/?uin=2773501874&Site=Sambow&Menu=yes"><i class="fa fa-qq fa-2x"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <form action="https://www.fyscu.com/merge.php" method="post">
+                            <div class="form-group has-feedback left">
+                                <input name='name' type="text" class="form-control" placeholder="姓名*">
+                                <i class="fa fa-user form-control-feedback"></i>
+                            </div>
+                            <div class="form-group has-feedback left">
+                                <input name='pnum' type="text" class="form-control" placeholder="电话*">
+                                <i class="fa fa-phone form-control-feedback"></i>
+                            </div>
+                            <div class="form-group has-feedback left">
+                                <input name='mail' type="email" class="form-control" placeholder="邮箱*">
+                                <i class="fa fa-envelope-o form-control-feedback"></i>
+                            </div>
+                            <div class="form-group has-feedback left">
+                                <input name='qqid' type="text" class="form-control" placeholder="QQ号*">
+                                <i class="fa fa-qq form-control-feedback"></i>
+                            </div>
+                             <div class="form-group has-feedback left">
+                                <select name='selt' class="form-control" left">
+                                    <option value="未指定">部门</option>
+                                    <option value="未指定">未指定</option>
+                                    <option value="维修部">维修部</option>
+                                    <option value="行政部">行政部</option>
+                                    <option value="研发部">研发部</option>
+                                    <option value="设计部">设计部</option>
+                                    <option value="编辑部">编辑部</option>
+                                </select>
+
+                                <i class="fa fa-user-md form-control-feedback"></i>
+                            </div>
+
+                            <div class="form-group has-feedback left">
+                                <textarea name='text' class="form-control" rows="7" placeholder="信息*"></textarea>
+                                <i class="fa fa-pencil-square-o form-control-feedback"></i>
+                            </div>
+                            <button class="btn btn-primary btn-lg pull-right" type="submit">提交</button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="site-footer">
+            <div class="container">
+                        <p>飞扬俱乐部可能会收集你的Cookies和IP地址来收集信息，这将为我们提供反馈，以便更好地服务于您，我们不会以任何方式泄露您的个人隐私，继续访问此网站代表您允许本条款内容
+                        </p>
+                        <p>Feiyang Club may collect your cookies and IP address to collect information, which will provide us with feedback in order to better serve you. We will not disclose your personal privacy in any way. Continuing to visit this website represents that you have acquiesced to this clause.
+                        </p>
+                <div class="row">
+                    <span class="divider grey"></span>
+                    <h4> © 2003-2020 四川大学飞扬俱乐部 版权所有 Feiyang Club of Sichuan University, All Rights Reserved.<a href="http://beian.miit.gov.cn">蜀ICP备20010266号-1</a></h4>
+                    <h5> © 2020 DESIGN BY Chongqing Pikachu Technology Co., Ltd, All Rights Reserved</h5>
+                    <a href="#" class="scroll-top">
+                        <img src="https://www.fyscu.com/img/top.png" alt="" class="top">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="https://www.fyscu.com/js/jquery.min.js"></script>
+    <script src="https://www.fyscu.com/js/bootstrap.min.js"></script>
+    <script src="https://www.fyscu.com/js/stellar.js"></script>
+    <script src="https://www.fyscu.com/js/isotope.pkgd.min.js"></script>
+    <script src="https://www.fyscu.com/js/jquery.easypiechart.min.js"></script>
+    <script type="text/javascript" src="https://www.fyscu.com/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script type="text/javascript" src="https://www.fyscu.com/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="https://www.fyscu.com/js/waypoints.min.js"></script>
+    <script src="https://www.fyscu.com/js/script.js"></script>
+<script>
+        var musicPlaying = false;
+        var audioElement = document.getElementById('backgroundMusic');
+        var musicBtn = document.getElementById('music_btn');
+
+        function toggleMusic() {
+            if (musicPlaying) {
+                audioElement.pause();
+                musicBtn.classList.remove('music_rotate');
+                musicBtn.src = 'https://www.fyscu.com/img/music_off.png';
+            } else {
+                audioElement.play();
+                musicBtn.classList.add('music_rotate');
+                musicBtn.src = 'https://www.fyscu.com/img/music_on.png';
+            }
+
+            musicPlaying = !musicPlaying;
+        }
+
+        $(document).ready(function() {
+            appMaster.preLoader();
+            appMaster.smoothScroll();
+            appMaster.animateScript();
+            appMaster.navSpy();
+            appMaster.revSlider();
+            appMaster.stellar();
+            appMaster.skillsChart();
+            appMaster.isoTop();
+            appMaster.canvasHack();
+            var promise = audioElement.play();
+            if (promise !== undefined) {
+                promise.then(function() {
+                    console.log("浏览器允许自动播放");
+                    musicBtn.classList.add('music_rotate');
+                    musicBtn.src = 'https://www.fyscu.com/img/music_on.png';
+                }).catch(function(error) {
+                    console.log("浏览器已阻止自动播放");
+                    musicBtn.classList.remove('music_rotate');
+                    musicBtn.src = 'https://www.fyscu.com/img/music_off.png';
+                });
+            } else {
+                console.log("旧版本浏览器，无法确定自动播放策略。");
+            }
+        });
+    </script>
+</body>
+</html>
