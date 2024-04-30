@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Unicode转换</title>
+    <link rel="stylesheet" type="text/css" href="beautify.css">
+</head>
+<body>
+    <input type="text" class="form-line" id="UnicodeInput" autofocus=on placeholder=" > type Unicode here">
+    <div class="dropdown">
+      <button class="dropbtn">+</button>
+      <div class="dropdown-content">
+        <a onclick="addReversal()"> 反转字符</a>
+        <a onclick="add200B()"> \u200B</a>
+        <a onclick="add200C()"> \u200C</a>
+        <a onclick="add200D()"> \u200D</a>
+        <a onclick="add200E()"> \u200E</a>
+        <a onclick="add200F()"> \u200F</a>
+        <a onclick="addFEFF()"> \uFEFF</a>
+      </div>
+    </div>
+    <br>
+    <!-- <button class="btn" onclick="UnicodeToStr()">Unicode转字符串</button> -->
+
+    <p id="stringText"></p>
+    <button class="btn" data-clipboard-action="copy" data-clipboard-target="#stringText">复制字符串</button>
+    <HR width="80%" color=#999999 SIZE=1>
+    <br>
+    <!-- -------------------------------------------------------------- -->
+    <input type="text" class="form-line" id="stringInput" placeholder=" > type string here">
+    <!-- <button class="btn" onclick="strToUnicode()">字符串转Unicode</button> -->
+    <p id="UnicodeText"></p>
+    <button class="btn" data-clipboard-action="copy" data-clipboard-target="#UnicodeText">复制Unicode</button>
+    <HR width="80%" color=#999999 SIZE=1>
+    <br>
+    <!-- -------------------------------------------------------------- -->
+    <input type="text" class="form-line" id="textInput" placeholder=" > type text here">
+    <button class="btn" onclick="strToStr()">生成反屏蔽文本</button>
+    <p id="transformedText"></p>
+    <button class="btn" data-clipboard-action="copy" data-clipboard-target="#transformedText">复制文本</button>
+    <HR width="80%" color=#999999 SIZE=1>
+    <br>
+    <!-- -------------------------------------------------------------- -->
+    <input type="text" class="form-line" id="visibleInput" placeholder=" > type visible text here">
+    <input type="text" class="form-line" id="hidenInput" placeholder=" > type hiden text here">
+    <button class="btn" onclick="encode()">生成加密文本</button>
+    <p id="encodedText"></p>
+    <button class="btn" data-clipboard-action="copy" data-clipboard-target="#encodedText">复制加密文本</button>
+    <HR width="80%" color=#999999 SIZE=1>
+    <br>
+    <!-- -------------------------------------------------------------- -->
+    <input type="text" class="form-line" id="encodedInput" placeholder=" > type encoded text here">
+    <button class="btn" onclick="decode()">文本解密</button>
+    <p id="visibleText"></p> <p id="hidenText"></p>
+    <button class="btn" data-clipboard-action="copy" data-clipboard-target="#hidenText">复制暗语</button>
+    <HR width="80%" color=#999999 SIZE=1>
+    <br>
+
+    <script src="./clipboard.min.js"></script>
+
+    <script>// button 相关
+        // function getMousePos(event) {
+        //    var e = event || window.event;
+        //    var scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
+        //    var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+        //    var x = e.pageX || e.clientX + scrollX;
+        //    var y = e.pageY || e.clientY + scrollY;
+        //    //alert('x: ' + x + '\ny: ' + y);
+        //    return { 'x': x, 'y': y };
+        // }
+        var clipboard = new ClipboardJS('.btn');
+        const buttons = document.querySelectorAll("button","a");
+        buttons.forEach(btn=>{
+            btn.addEventListener("mousedown",function(e){
+                var scrollX = document.documentElement.scrollLeft || document.body.scrollLeft;
+                var scrollY = document.documentElement.scrollTop || document.body.scrollTop;
+                let x = e.clientX - e.target.offsetLeft + scrollX;
+                let y = e.clientY - e.target.offsetTop + scrollY;
+                let ripples = document.createElement("span");
+                ripples.style.left = x + 'px';
+                ripples.style.top = y + 'px';
+                this.appendChild(ripples);
+                setTimeout(() => {
+                    ripples.remove();
+                }, 1000);
+            })
+        })
+    </script>
+
+    <script>
+        function string2unicode(str){
+            var ret ="";
+            for(var i=0; i < str.length; i++){
+                var c = str.charCodeAt(i).toString(16);
+                if (c.length == 1) {c = '000'+c};
+                if (c.length == 2) {c = '00'+c};
+                if (c.length == 3) {c = '0'+c};
+                ret += "\\u" + c;
+            }
+            return ret;
+        }
+        function unicode2string(unicode){
+            return eval("'" + unicode + "'");
+        }
+        function strToStr(){
+            var ret ="";
+            var m =document.getElementById("textInput").value;//获取输入框的值
+            for(var i=0; i < m.length; i++){
+                ret += m[i] + "\u200b" + "\u200c" + "\u200d";
+            }
+            document.getElementById("transformedText").innerHTML = ret;
+        }
+        stringInput.onkeyup = function strToUnicode(){
+            var m = document.getElementById("stringInput").value;//获取输入框的值
+            document.getElementById("UnicodeText").innerHTML = string2unicode(m);
+        }
+        UnicodeInput.onkeyup = function UnicodeToStr(){
+            var m = document.getElementById("UnicodeInput").value;//获取输入框的值
+            document.getElementById("stringText").innerHTML = unicode2string(m);
+        }
+        function addReversal(){
+            var m = document.getElementById("UnicodeInput").value;//获取输入框的值
+            document.getElementById("UnicodeInput").value = m + '\\u202e';
+        }
+        function add200B(){
+            var m = document.getElementById("UnicodeInput").value;//获取输入框的值
+            document.getElementById("UnicodeInput").value = m + '\\u200b';
+        }
+        function add200C(){
+            var m = document.getElementById("UnicodeInput").value;//获取输入框的值
+            document.getElementById("UnicodeInput").value = m + '\\u200c';
+        }
+        function add200D(){
+            var m = document.getElementById("UnicodeInput").value;//获取输入框的值
+            document.getElementById("UnicodeInput").value = m + '\\u200d';
+        }
+        function add200E(){
+            var m = document.getElementById("UnicodeInput").value;//获取输入框的值
+            document.getElementById("UnicodeInput").value = m + '\\u200e';
+        }
+        function add200F(){
+            var m = document.getElementById("UnicodeInput").value;//获取输入框的值
+            document.getElementById("UnicodeInput").value = m + '\\u200f';
+        }
+        function addFEFF(){
+            var m = document.getElementById("UnicodeInput").value;//获取输入框的值
+            document.getElementById("UnicodeInput").value = m + '\\ufeff';
+        }
+        function encode(){
+            const str = "\u200e\u200f\u200c\u200d\ufeff";
+            var vis = document.getElementById("visibleInput").value;
+            var hid = document.getElementById("hidenInput").value;
+            var result = ""
+            for (var i = 0; i < hid.length; i++) {
+                var tmp = hid.charCodeAt(i);
+                var oneLetter = "";
+                while (tmp > 0){
+                    oneLetter = str[tmp % 5] + oneLetter;
+                    tmp = (tmp - tmp % 5) / 5;
+                }
+                result = result + oneLetter;
+                if (i != hid.length - 1){
+                    result += "\u200b";
+                }
+            }
+            document.getElementById("encodedText").innerHTML = vis[0] + result + vis.slice(1);
+        }
+        function decode(){
+            var str = document.getElementById("encodedInput").value;
+            var hid = "";
+            var vis = "";
+            for (var i = 0; i < str.length; i++) {
+                if (str[i] == '\u200b' || str[i] == '\u200c' || str[i] == '\u200d' || str[i] == '\u200e' || str[i] == '\u200f' || str[i] == '\ufeff'){
+                    hid = hid + str[i];
+                }else{
+                    vis = vis + str[i];
+                }
+            }
+            var letters = hid.split('\u200b');
+            // console.log(letters);
+            for (var i = 0; i < letters.length; i++) {
+                var charCode = 0;
+                for (var j = 0; j < letters[i].length; j++) {
+                    if (letters[i][j] == '\u200e'){
+                        charCode = charCode * 5 + 0;
+                    }
+                    if (letters[i][j] == '\u200f'){
+                        charCode = charCode * 5 + 1;
+                    }
+                    if (letters[i][j] == '\u200c'){
+                        charCode = charCode * 5 + 2;
+                    }
+                    if (letters[i][j] == '\u200d'){
+                        charCode = charCode * 5 + 3;
+                    }
+                    if (letters[i][j] == '\ufeff'){
+                        charCode = charCode * 5 + 4;
+                    }
+                }
+                hid = hid + String.fromCharCode(charCode);
+            }
+            document.getElementById("visibleText").innerHTML = vis;
+            document.getElementById("hidenText").innerHTML = hid;
+        }
+    </script>
+</body>
+</html>
+
